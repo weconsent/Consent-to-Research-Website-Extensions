@@ -1,0 +1,1 @@
+INSERT INTO `aiki_users_groups` VALUES (1,0,'System Administrators','SystemGOD',1),(2,0,'Modules Administrators','ModulesGOD',2),(3,0,'Guests','ViewPublished',100),(4,0,'Banned users','ViewPublished',101),(5,0,'Sage User','sage',3),(6,0,'Alpha Tester','alpha',4);
