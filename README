@@ -1,1 +1,13 @@
-The repository for extensions to be used as a submodule in an aiki setup.
+The repository for extensions to be used as a submodule in the Consent to Research Website.
+
+The publicly readable repository is here: https://github.com/weconsent/Consent-to-Research-Website-Extensions
+
+The repository for the Consent to Research Website is here, along with instructions: https://github.com/weconsent/Consent-to-Research-Website
+
+To write changes to the Aiki database back to this repository, use the following mysqldump commands:
+
+mysqldump --opt --no-data --skip-comments -u DB_USER -p DB_NAME aiki_users_groups ctr_agreements ctr_forms ctr_tasks ctr_uploads > sql/CreateTables-sites_CtR.sql
+
+mysqldump --compact --no-create-info -u DB_USER -p DB_NAME aiki_users_groups ctr_forms > sql/InsertVariable-sites_CtR.sql
+
+mysqldump --compact --no-create-info --where="app_id='0'" -u DB_USER -p DB_NAME aiki_widgets > sql/InsertWidgets-sites_CtR.sql
