@@ -30,7 +30,17 @@ CREATE TABLE `ctr_agreements` (
   `full_name` varchar(255) NOT NULL,
   `date_signed` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `ctr_forms`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ctr_forms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `form` mediumtext NOT NULL,
+  `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `ctr_tasks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
