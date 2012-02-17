@@ -10,7 +10,7 @@ mysqldump --opt --no-data --skip-comments -u DB_USER -p DB_NAME aiki_users_group
 
 mysqldump --compact --no-create-info -u DB_USER -p DB_NAME aiki_users_groups ctr_forms > sql/InsertVariable-sites_CtR.sql
 
-mysqldump --compact --no-create-info --where="app_id='0'" -u DB_USER -p DB_NAME aiki_widgets > sql/InsertWidgets-sites_CtR.sql
+mysqldump -r sql/InsertWidgets-sites_CtR.sql --compact --no-create-info --where="app_id='0'" --default-character-set=latin1 -N -u DB_USER -p DB_NAME aiki_widgets
 
 mysqldump --compact --no-create-info --where="id='21'" -u DB_USER -p DB_NAME aiki_forms > sql/InsertForms-sites_CtR.sql
 
