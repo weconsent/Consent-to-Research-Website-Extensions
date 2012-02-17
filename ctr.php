@@ -18,7 +18,7 @@ class ctr {
 
 			$subject = "Your Consent to Research Alpha Code";
 
-			$message = $message."\n\r".
+			$message = "\n\r".
 			"Follow this link to begin the alpha testing process: <a href='".$config['url']."alpha/".$randkey."'>".$config['url']."alpha/".$randkey."</a><br/><br/><strong>Consent to Research</strong>";
 
 			mail($email,$subject,$message,$headers);
